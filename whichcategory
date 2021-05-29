@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int idade;
+  cout <<"Informe a sua idade: ";
+  cin >>idade;
+  if(idade>=7 && idade<=12)
+{
+cout << "Você participará na categoria infantil!";
+}
+else if(idade>=13 && idade<=17)
+{
+cout << "Você participará na categoria juvenil!";
+}
+else if(idade>=18 && idade<=49)
+{
+cout << "Você participará na categoria adulto!";
+}
+else if(idade>=50)
+{
+cout << "Você participará na categoria sênior!";
+}
+else
+{
+cout << "O número informado é inválido!";
+}  
+}
