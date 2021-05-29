@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int cod, qtde;
+float valor, valor_total;
+const char *item;
+char continua= 'S';
+cout << "***Cardápio:***\n";
+cout <<  "100 - Hambúrguer – R$5.50\n";
+cout << "101 – Cachorro-quente – R$4.50\n";
+cout <<  "102 – Milkshake – R$7.00\n";
+cout <<  "103 – Pizza brotinho – R$8.00\n";
+cout <<  "104 - Cheeseburguer – R$8.50\n";
+cin >> cod;
+cout << "Informe a quantidade desejada:";
+cin >> qtde;
+while (continua=='S')
+{
+switch(cod)
+{
+case 100: 
+item = "Hambúrger"; valor=qtde*5.50;
+break;
+case 101:
+item = "Cachorro-quente"; valor=qtde*4.50;
+break;
+case 102:
+item = "Milkshake"; valor=qtde*7.00;
+break;
+case 103:
+item = "Pizza brotinho"; valor=qtde*8.00;
+break;
+case 104:
+item = "Cheeseburger"; valor=qtde*8.50;
+break;
+default:
+cout << "Pedido inválido!";
+}
+cout << "Adicionar outro item? S / N:";
+cin >> continua;
+if(continua=='S')
+{
+	cout << "***Cardápio:***\n";
+cout <<  "100 - Hambúrguer – R$5.50\n";
+cout << "101 – Cachorro-quente – R$4.50\n";
+cout <<  "102 – Milkshake – R$7.00\n";
+cout <<  "103 – Pizza brotinho – R$8.00\n";
+cout <<  "104 - Cheeseburguer – R$8.50\n";
+cin >> cod;
+cout << "Informe a quantidade desejada:";
+cin >> qtde;
+}
+valor_total+=valor;
+}
+cout << "Valor total a pagar: R$" << valor_total;
+}
